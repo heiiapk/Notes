@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.cheng.notes.Fragment.ContentFragment;
 import com.cheng.notes.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -33,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView= (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+       // getFragmentManager().beginTransaction().add(R.id.content_main,new ContentFragement()).commit();
+        getFragmentManager().beginTransaction().add(R.id.content_main, ContentFragment.getInstance("卧槽你")).commit();
 
 
     }

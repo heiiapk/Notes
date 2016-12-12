@@ -25,15 +25,14 @@
         android:layout_height="wrap_content">
     </android.support.v7.widget.Toolbar>
 
-    <fragment
-        android:name="com.cheng.notes.Fragment.ContentFragement"
+    <FrameLayout
         android:id="@+id/content_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
 
-    </fragment>
+    </FrameLayout>
 </LinearLayout>
 
     <android.support.design.widget.NavigationView
