@@ -35,15 +35,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView= (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
        // getFragmentManager().beginTransaction().add(R.id.content_main,new ContentFragement()).commit();
-        getFragmentManager().beginTransaction().add(R.id.content_main, ContentFragment.getInstance("卧槽你")).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.content_main, new ContentFragment()).commit();
 
 
     }
 
-//    public void cheng(View view){
-//        getFragmentManager().beginTransaction().add(R.id.content_main,
-//                ContentFragement.getInstance(getString(hello)));
-//    }
 
     @Override
     public void onBackPressed() {
