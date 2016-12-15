@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    //记录当前按下时间
+    private long mPressTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +48,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
         }else {
-            super.onBackPressed();
+            long nowTime=System.currentTimeMillis();
+            if (nowTime - mPressTime >2000){
+                Toast.makeText(this,"再按一次退出应用",Toast.LENGTH_SHORT).show();
+                mPressTime = nowTime;
+            }else {
+                this.finish();
+                System.exit(0);
+            }
+            //super.onBackPressed();
         }
     }
 
