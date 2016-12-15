@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle =new ActionBarDrawerToggle(
                 this,drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView= (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-       // getFragmentManager().beginTransaction().add(R.id.content_main,new ContentFragement()).commit();
+        // getFragmentManager().beginTransaction().add(R.id.content_main,new ContentFragement()).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.content_main, new ContentFragment()).commit();
 
 
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 this.finish();
                 System.exit(0);
             }
-            //super.onBackPressed();
         }
     }
 
