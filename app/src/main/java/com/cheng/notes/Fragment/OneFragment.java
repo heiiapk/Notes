@@ -21,7 +21,6 @@ public class OneFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View view=inflater.inflate(R.layout.fragment_one,container,false);
         TextView tv= (TextView) view.findViewById(R.id.tv);
-        tv.setText("fragment!!");
         return  view;
 
     }
