@@ -30,7 +30,6 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="50dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <com.cheng.notes.View.MyviewPager
@@ -38,12 +37,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:visibility="invisible"-->
-            <!--android:id="@+id/tv"-->
-            <!--android:textSize="30sp"-->
-            <!--android:text="欣欣"/>-->
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>
